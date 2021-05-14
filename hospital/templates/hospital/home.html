@@ -1,0 +1,12 @@
+<title>Welcome to the Hospital</title>
+{% extends "hospital/base.html" %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+    {{message}}
+</div>
+{% endfor %}
+{% endif %}
+{% block content %}
+<!-- <img src="https://img.favpng.com/8/17/22/hospital-cartoon-png-favpng-fxE9MY7UkWt5fpw4UCv15FEKk.jpg" alt="error loading image" > -->
+{% endblock content %}

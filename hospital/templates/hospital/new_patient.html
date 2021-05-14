@@ -1,0 +1,46 @@
+<title>Register</title>
+{% extends "hospital/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        <fieldset class="from-group">
+            <legend class="border-bottom mb-4">
+                Make an Appointment Today
+            </legend>
+            <div class="row">
+                <div class="col-md-6">
+                    {{form.first_name| as_crispy_field}}
+                </div>
+                <div class="col-md-6">
+                    {{form.last_name| as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{form.gender| as_crispy_field}}
+                </div>
+                <div class="col-md-6">
+                    {{form.date| as_crispy_field}}
+                </div>
+            </div>
+            {{form.contact| as_crispy_field}}
+            {{form.email| as_crispy_field}}
+            {{form.password| as_crispy_field}}
+            {{form.confirm_password| as_crispy_field}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">
+                Sign Up
+            </button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already have an Account?
+            <a href="{% url 'login' %}" class="ml-2">Sign In</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

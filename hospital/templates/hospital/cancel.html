@@ -1,0 +1,18 @@
+<title>Cancel?</title>
+{% extends "hospital/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="content-section" >
+    <form method="POST" action="{% url 'cancel' patient.pat_id %}">
+        {% csrf_token %}
+        <fieldset class="from-group">
+            <legend class="border-bottom mb-4">
+                Are you sure you want to cancel your appointment scheduled on {{patient.date}} ?
+            </legend>
+        </fieldset>
+        <a href="{% url 'hospital-home' %}">Back to Homepage</a>
+        <br><br>
+        <input class= 'btn btn-outline-info' href="{% url 'cancel' patient.pat_id %} " type="submit" name="Confirm"></input>
+    </form>
+</div>
+{% endblock content %}
