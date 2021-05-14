@@ -11,15 +11,22 @@ Similarly, it will have a doctor and a department table for various other staff 
 
 
 Connecting Django to MySQL
+--------------------------
+
 SQLite is the default database used by Django for data storage and retrieval processes. 
 We can change the database to our preference; for this project, we’ll be using MySQL database.
 After creating a schema , let's say (hdbms) in MySQL, executing the following lines created a user named _user with the password- hdbms:
 
 CREATE USER ‘_user’@’%’ IDENTIFIED WITH mysql_native_password BY ‘hdbms’;
+
 GRANT ALL ON hdbms.* TO ‘_user’@’%’;
+
 FLUSH PRIVILEGES;
 
 Authentication Backends
+-----------------------
+
 AUTHENTICATION_BACKENDS = [‘django.contrib.auth.backends.ModelBackend’,’hospital.loginbackend.PatientAuthBackend’,]
+
 ‘django.contrib.auth.backends.ModelBackend’ is the default backend provided by Django to authenticate any user in Django.
 ‘hospital.loginbackend.PatientAuthBackend’ is the custom backend defined by us to authenticate the patients from our patient model.
