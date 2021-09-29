@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'HDBMS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hdbms',
+        'NAME': 'hdbms_2',
         'USER': 'user',
         'PASSWORD': 'hdbms',
         'HOST': 'localhost',

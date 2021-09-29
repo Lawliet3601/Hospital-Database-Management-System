@@ -9,7 +9,7 @@
     <h2>Radiology</h2><br>
     {% for doctor in doctors %}
     {% if doctor.dept.name == 'Radiology' %}
-    {{ doctor.name }}
+    <li>{{ doctor.name }}</li>
     <br>
     {% endif %}
     {% endfor %}
@@ -18,7 +18,7 @@
     <h2>Cardiology</h2><br>
     {% for doctor in doctors %}
     {% if doctor.dept.name == 'Cardiology' %}
-    {{ doctor.name }}
+    <li>{{ doctor.name }}</li>
     <br>
     {% endif %}
     {% endfor %}
@@ -27,7 +27,7 @@
     <h2>Neurology</h2><br>
     {% for doctor in doctors %}
     {% if doctor.dept.name == 'Neurology' %}
-    {{ doctor.name }}
+    <li>{{ doctor.name }}</li>
     <br>
     {% endif %}
     {% endfor %}
@@ -36,7 +36,7 @@
     <h2>Oncology</h2><br>
     {% for doctor in doctors %}
     {% if doctor.dept.name == 'Oncology' %}
-    {{ doctor.name }}
+    <li>{{ doctor.name }}</li>
     <br>
     {% endif %}
     {% endfor %}
@@ -45,7 +45,7 @@
     <h2>Physiology</h2><br>
     {% for doctor in doctors %}
     {% if doctor.dept.name == 'Physiology' %}
-    {{ doctor.name }}
+    <li>{{ doctor.name }}</li>
     <br>
     {% endif %}
     {% endfor %}
@@ -54,7 +54,7 @@
     <h2>Gynecology</h2><br>
     {% for doctor in doctors %}
     {% if doctor.dept.name == 'Gynecology' %}
-    {{ doctor.name }}
+    <li>{{ doctor.name }}</li>
     <br>
     {% endif %}
     {% endfor %}
