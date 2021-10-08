@@ -115,4 +115,5 @@ def about(request):
 
 def docs(request):
     all_doctors = doctors.objects.all()
-    return render(request, 'hospital/doctors.html', {'doctors': all_doctors})
+    departments = department.objects.all()
+    return render(request, 'hospital/doctors.html', {'doctors': all_doctors, "depts": departments})

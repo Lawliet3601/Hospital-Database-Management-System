@@ -5,58 +5,16 @@
 <div class="content-section">
     <h1>Our Doctors</h1>
 </div>
+{% for dept in depts %}
 <div class="content-section">
-    <h2>Radiology</h2><br>
+    <h2>{{ dept.name }}</h2>
+    <br>
     {% for doctor in doctors %}
-    {% if doctor.dept.name == 'Radiology' %}
+    {% if doctor.dept.name == dept.name %}
     <li>{{ doctor.name }}</li>
     <br>
     {% endif %}
     {% endfor %}
 </div>
-<div class="content-section">
-    <h2>Cardiology</h2><br>
-    {% for doctor in doctors %}
-    {% if doctor.dept.name == 'Cardiology' %}
-    <li>{{ doctor.name }}</li>
-    <br>
-    {% endif %}
-    {% endfor %}
-</div>
-<div class="content-section">
-    <h2>Neurology</h2><br>
-    {% for doctor in doctors %}
-    {% if doctor.dept.name == 'Neurology' %}
-    <li>{{ doctor.name }}</li>
-    <br>
-    {% endif %}
-    {% endfor %}
-</div>
-<div class="content-section">
-    <h2>Oncology</h2><br>
-    {% for doctor in doctors %}
-    {% if doctor.dept.name == 'Oncology' %}
-    <li>{{ doctor.name }}</li>
-    <br>
-    {% endif %}
-    {% endfor %}
-</div>
-<div class="content-section">
-    <h2>Physiology</h2><br>
-    {% for doctor in doctors %}
-    {% if doctor.dept.name == 'Physiology' %}
-    <li>{{ doctor.name }}</li>
-    <br>
-    {% endif %}
-    {% endfor %}
-</div>
-<div class="content-section">
-    <h2>Gynecology</h2><br>
-    {% for doctor in doctors %}
-    {% if doctor.dept.name == 'Gynecology' %}
-    <li>{{ doctor.name }}</li>
-    <br>
-    {% endif %}
-    {% endfor %}
-</div>
+{% endfor %}
 {% endblock content %}
