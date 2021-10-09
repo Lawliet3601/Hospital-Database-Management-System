@@ -2,6 +2,8 @@
     "python.pythonPath": "C:\\Users\\aadir\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "files.associations": {
         "*.html": "html",
-        "ostream": "cpp"
+        "*.py3": "python",
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }
